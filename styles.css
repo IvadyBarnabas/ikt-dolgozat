@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffe0;
+}
+main{
+    display:grid;
+    grid-template-areas:
+     "h h h"
+     "n n n"
+     "a ar ar"
+     "f f f" ;
+     gap: 20px;
+     background-color: white;
+}
+header{
+    grid-area: h;
+    text-align: left;
+    color:#127722;
+}
+nav{
+    grid-area: n;
+    color: #9fbc5a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    gap: 10px;
+}
+aside{
+    grid-area: a;
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    border: lightgray 2px solid;
+    padding: 2px;
+}
+article{
+    grid-area: ar;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.card{
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 2px lightgray;
+}
+.card h2{
+    color: #127722;
+    background-color: #f1efef;
+    border-radius: 10px;
+
+}
+footer{
+    grid-area: f;
+    color: #127722;
+    text-align: center;
+}
