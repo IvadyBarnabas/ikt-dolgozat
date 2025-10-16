@@ -5,9 +5,11 @@
 }
 body{
     background-color: #ffffe0;
+    
 }
 main{
     display:grid;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
      "h h h"
      "n n n"
@@ -15,6 +17,7 @@ main{
      "f f f" ;
      gap: 20px;
      background-color: white;
+     max-width: 1200px;
 }
 header{
     grid-area: h;
@@ -23,14 +26,27 @@ header{
 }
 nav{
     grid-area: n;
-    color: #9fbc5a;
+    background-color: #127722;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 120px 120px 120px;
     text-align: left;
-    gap: 10px;
+    gap: 0px;
+    padding: 10px;
+}
+nav a{
+    color: #add68c;
+    text-decoration: none;
+    padding: 5px;
+}
+nav a:hover{
+    text-decoration: underline;
 }
 aside{
     grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    max-height: auto;
 }
 img{
     width: 100%;
@@ -49,18 +65,19 @@ article{
     gap: 20px;
 }
 .card{
-    padding: 5px;
     border-radius: 10px;
     border: solid 2px lightgray;
 }
 .card h2{
     color: #127722;
     background-color: #f1efef;
-    border-radius: 10px;
-
+    padding: 10px;
+    font-size: 15px;
+    text-align: left;
 }
 footer{
     grid-area: f;
     color: #127722;
     text-align: center;
+    padding: 20px;
 }
