@@ -96,6 +96,12 @@ footer{
     text-align: center;
     padding: 5px;
 }
+.felsorolas{
+    padding-left: 20px;
+}
+li{
+    padding: 5px;
+}
 @media (max-width: 800px) {
     main {
         display:grid;
