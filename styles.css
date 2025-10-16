@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 body{
@@ -15,14 +13,19 @@ main{
      "n n n"
      "a ar ar"
      "f f f" ;
-     gap: 20px;
-     background-color: white;
-     max-width: 1200px;
+    gap: 20px;
+    background-color: white;
+    max-width: 1100px;
+    max-height: auto;
+    margin: auto;
 }
 header{
     grid-area: h;
     text-align: left;
     color:#127722;
+}
+h1{
+    padding: 10px;
 }
 nav{
     grid-area: n;
@@ -34,7 +37,7 @@ nav{
     padding: 10px;
 }
 nav a{
-    color: #add68c;
+    color: #9fc99e;
     text-decoration: none;
     padding: 5px;
 }
@@ -47,6 +50,7 @@ aside{
     grid-template-columns: 1fr;
     gap: 5px;
     max-height: auto;
+    padding: 5px;
 }
 img{
     width: 100%;
@@ -58,26 +62,55 @@ img{
 }
 article{
     grid-area: ar;
+    padding: 5px;
 }
 .cards{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    max-height: auto;
 }
 .card{
     border-radius: 10px;
     border: solid 2px lightgray;
+    max-height: auto;
+}
+.img{
+    padding: 10px;
 }
 .card h2{
     color: #127722;
     background-color: #f1efef;
     padding: 10px;
-    font-size: 15px;
+    font-size: 20px;
     text-align: left;
+}
+.card p{
+    padding: 5px;
+    font-size: 20px;
 }
 footer{
     grid-area: f;
     color: #127722;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
+}
+@media (max-width: 800px) {
+    main {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "n"
+        "ar"
+        "a"
+        "f" ;
+        padding: 10px;
+        gap: 20px;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: 120px;
+        gap: 10px;
+    }
 }
